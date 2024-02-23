@@ -1,7 +1,7 @@
 using System;
 
 namespace kkk_3_3{
-    class dim2 : dim, IDim2, IDim{
+    class dim2 : dim, IDim2, IDim, IPrinter{
         private int[,] mass;
 
         public Random rnd = new();
@@ -87,6 +87,10 @@ namespace kkk_3_3{
             average = average / (double)mass.Length;
             Console.WriteLine($"Array average: {average}");
             return average;
+        }
+
+        public void Print(){
+            Show();
         }
     }
 }

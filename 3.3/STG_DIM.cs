@@ -1,7 +1,7 @@
 using System;
 
 namespace kkk_3_3{
-    class dimstg : dim, IDimstg, IDim{
+    class dimstg : dim, IDimstg, IDim, IPrinter{
         private int[][] mass;
 
         private double[] averages;
@@ -114,6 +114,10 @@ namespace kkk_3_3{
                     if(mass[y][x] % 2 == 0) mass[y][x] = mul;
                 }
             }
+        }
+
+        public void Print(){
+            Show();
         }
     }
 }

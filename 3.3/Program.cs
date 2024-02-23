@@ -28,6 +28,22 @@ namespace kkk_3_3
                 i.Average();
                 Console.WriteLine("-------------------------------------------------------------");
             }
+
+            Printer _printer = new Printer();
+            _printer.printers = new IPrinter[4];
+
+            _printer.printers[0] = (IPrinter)m.Array[0];
+
+            _printer.printers[1] = (IPrinter)m.Array[1];
+
+            _printer.printers[2] = (IPrinter)m.Array[2];
+
+            _printer.printers[3] = new DayOfWeek();
+
+            foreach(IPrinter i in _printer.printers){
+                i.Print();
+                Console.WriteLine("-------------------------------------------------------------");
+            }
         }
     }
 }

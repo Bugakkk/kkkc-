@@ -69,4 +69,17 @@ namespace kkk_3_3
     {
         public IDim[] Array{ get; set; }
     }
+
+    class DayOfWeek : IPrinter
+    {
+        public void Print()
+        {
+            Console.WriteLine("Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье.");
+        }
+    }
+
+    class Printer
+    {
+        public IPrinter[] printers{ get; set; }
+    }
 }

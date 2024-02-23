@@ -1,7 +1,7 @@
 using System;
  
 namespace kkk_3_3{
-    class dim1 : dim, IDim1, IDim{
+    class dim1 : dim, IDim1, IDim, IPrinter{
         private int[] mass = new int[0];
         
         public Random rnd = new();
@@ -113,6 +113,10 @@ namespace kkk_3_3{
             }
             mass = new int[new_Length];
             mass = new_mass;
+        }
+
+        public void Print(){
+            Show();
         }
     }
 }
