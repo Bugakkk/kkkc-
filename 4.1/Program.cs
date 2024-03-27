@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace kkk_4_1
 {
@@ -6,6 +6,7 @@ namespace kkk_4_1
     {
         public static void Main()
         {
+            Coll<int> m = new Coll<int>();
             
         }
     }
