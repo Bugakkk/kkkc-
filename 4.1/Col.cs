@@ -22,23 +22,42 @@ namespace kkk_4_1
 
             else
             {
-                T[] new_arr = new T[arr.Length * 2 + 1];
+                Array.Resize(ref arr, arr.Length * 2 + 1);
 
-                for(int i = 0; i < arr.Length; i++)
-                {
-                    new_arr[i] = arr[i];
-                }
-
-                new_arr[last_el + 1] = el;
+                arr[last_el + 1] = el;
                 last_el++;
-
-                arr = new_arr;
             }
         }
 
         public void Remove()
         {
             arr[last_el] = default;
+            last_el--;
+        }
+
+        public int Len()
+        {
+            return last_el;
+        }
+
+        public void Print()
+        {
+            if(last_el >= 0)
+            {
+                Console.Write("[");
+
+                for(int i = 0; i < last_el + 1; i++)
+                {
+                    Console.Write($"{arr[i]}" + (i != last_el ? ", " : ""));
+                }
+
+                Console.Write("]");
+                Console.Write("\n");
+            }
+
+            else{
+                Console.WriteLine("[]");
+            }
         }
     }
 }
